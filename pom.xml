@@ -17,11 +17,7 @@
 
 	<dependencies>
 
-		<dependency>
-			<groupId>com.vmetrix.v3.persistence</groupId>
-			<artifactId>v3-persistence-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -61,11 +57,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.oracle.jdbc</groupId>
-			<artifactId>ojdbc</artifactId>
-			<version>8</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
