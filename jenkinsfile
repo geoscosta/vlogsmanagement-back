@@ -14,24 +14,22 @@ pipeline {
         stage('Upload War To Nexus') {
             steps {
                 script {
-                    def mavenPom = readMavenPom file: 'pom.xml'
-                    def nexusRepoName = mavenPom.version.endsWith("SNAPSHOT") ? "V3LogsManagement-snapshot" : "V3LogsManagement-release"
-
-                    nexusArtifactUploader artifacts: [
+                    nexusArtifactUploader artifacts:
+                    [
                         [
                             artifactId: 'v3-vmetrix-vlogsmanagement-back',
                             classifier: '',
-                            file: "target/V3LogsManagement-Back${mavenPom.version}.war",
-                            type: 'war'
+                            file: 'target/vlogsmanagement-back-0.0.1.jar',
+                            type: 'jar'
                         ]
                     ],
                     credentialsId: 'nexus3',
                     groupId: 'com.vmetrix.v3.vlogsmanagement',
-                    nexusUrl: 'http://maven.vmetrix.com:8081',
+                    nexusUrl: 'localhost:8081',
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    repository: nexusRepoName,
-                    version: "${mavenPom.version}"
+                    repository: 'http://localhost:8081/repository/maven-releases/', 
+                    version: '0.0.1'
                 }
             }
         }
