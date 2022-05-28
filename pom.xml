@@ -6,7 +6,7 @@
 
 	<groupId>com.vmetrix.v3.vlogsmanagement</groupId>
 	<artifactId>v3-vmetrix-vlogsmanagement-back</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>vlogsmanagement-back</name>
 	<description>Log manager system</description>
 
